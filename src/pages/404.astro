@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="404">
+
+  <section class="px-10 pt-32 pb-20 max-w-2xl">
+    <h1 class="font-display text-7xl font-normal text-[#e8e0d0] mb-2">Lost in</h1>
+    <h2 class="font-display text-7xl font-normal italic text-[#c9873a] mb-10">the void.</h2>
+    <p class="text-[15px] leading-relaxed text-white/50 font-light max-w-md mb-12">The page you're looking for doesn't exist — it may have been moved, deleted, or you may have mistyped the URL.</p>
+    <div class="flex gap-4"> 
+      <a href="/" class="bg-[#c9873a] text-[#0f0e0c] px-7 py-3 text-sm font-medium tracking-wide rounded-sm hover:-translate-y-1 transition-all duration-200">Go home</a>
+      <a href="/work" class="border border-white/20 text-white/50 px-7 py-3 text-sm font-light tracking-wide rounded-sm hover:border-white/40 transition-colors">View work</a>
+    </div>
+  </section>
+
+</BaseLayout>

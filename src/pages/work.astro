@@ -1,19 +1,8 @@
 ---
-import '../styles/global.css';
-import Nav from '../components/Nav.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work · Wilbert Veloz</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-</head>
-<body class="bg-[#0f0e0c] text-[#e8e0d0] font-sans">
 
-  <Nav />
+<BaseLayout title="Work">
 
   <section class="px-10 pt-16 pb-8 max-w-4xl">
     <a href="/" class="font-mono text-[10px] tracking-widest uppercase text-white/30 hover:text-[#c9873a] transition-colors mb-8 inline-block">← Back</a>
@@ -27,8 +16,7 @@ import Nav from '../components/Nav.astro';
   <section class="px-10 pb-20">
     <div class="grid grid-cols-1 gap-6">
 
-      <a href="/work/banco-popular" class="group block border border-white/10 rounded-sm p-8 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
-        <div class="flex justify-between items-start mb-4">
+<a href="/work/banco-popular" class="group block border border-white/10 rounded-sm p-8 bg-white/[0.03] hover:bg-white/[0.06] hover:-translate-y-1 transition-all duration-200">        <div class="flex justify-between items-start mb-4">
           <div>
             <p class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] mb-2">Banco Popular Dominicano · 2023 – Present</p>
             <h2 class="font-display text-3xl text-[#e8e0d0] mb-1 group-hover:text-[#c9873a] transition-colors">App Popular</h2>
@@ -36,7 +24,7 @@ import Nav from '../components/Nav.astro';
           </div>
           <span class="font-mono text-[10px] text-[#c9873a] border border-[#c9873a]/40 px-3 py-1 tracking-widest">Tech Lead</span>
         </div>
-        <p class="text-sm leading-relaxed text-white/50 font-light mb-5 max-w-2xl">Full-featured banking app serving clients across the Dominican Republic — transfers, transactions, reclamations, and account management without visiting a branch. Includes Toke, a payment infrastructure feature for financial inclusion.</p>
+        <p class="text-sm leading-relaxed text-white/50 font-light mb-5 max-w-2xl">Full-featured banking app serving clients across the Dominican Republic — transfers, transactions, claims, and account management without visiting a branch. Includes Toke, a payment infrastructure feature for financial inclusion.</p>
         <div class="flex flex-wrap gap-2 mb-6">
           <span class="font-mono text-[10px] text-[#e8e0d0]/40 bg-white/5 border border-white/10 px-3 py-1">SwiftUI</span>
           <span class="font-mono text-[10px] text-[#e8e0d0]/40 bg-white/5 border border-white/10 px-3 py-1">Kotlin</span>
@@ -47,8 +35,7 @@ import Nav from '../components/Nav.astro';
         <span class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] group-hover:underline">View project →</span>
       </a>
 
-      <a href="/work/newtopia" class="group block border border-white/10 rounded-sm p-8 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
-        <div class="flex justify-between items-start mb-4">
+<a href="/work/newtopia" class="group block border border-white/10 rounded-sm p-8 bg-white/[0.03] hover:bg-white/[0.06] hover:-translate-y-1 transition-all duration-200">        <div class="flex justify-between items-start mb-4">
           <div>
             <p class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] mb-2">Tashi · 2022 – 2023</p>
             <h2 class="font-display text-3xl text-[#e8e0d0] mb-1 group-hover:text-[#c9873a] transition-colors">Newtopia</h2>
@@ -65,8 +52,7 @@ import Nav from '../components/Nav.astro';
         <span class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] group-hover:underline">View project →</span>
       </a>
 
-      <a href="/work/fulfill" class="group block border border-white/10 rounded-sm p-8 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
-        <div class="flex justify-between items-start mb-4">
+<a href="/work/fulfill" class="group block border border-white/10 rounded-sm p-8 bg-white/[0.03] hover:bg-white/[0.06] hover:-translate-y-1 transition-all duration-200">        <div class="flex justify-between items-start mb-4">
           <div>
             <p class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] mb-2">Tashi · 2021 – 2022</p>
             <h2 class="font-display text-3xl text-[#e8e0d0] mb-1 group-hover:text-[#c9873a] transition-colors">FullFill</h2>
@@ -86,10 +72,4 @@ import Nav from '../components/Nav.astro';
     </div>
   </section>
 
-  <footer class="px-10 py-8 border-t border-white/6 flex justify-between items-center">
-    <span class="font-mono text-[11px] text-white/20">Wilbert Veloz · Santo Domingo, DR</span>
-    <span class="font-mono text-[11px] text-white/20">2025</span>
-  </footer>
-
-</body>
-</html>
+</BaseLayout>

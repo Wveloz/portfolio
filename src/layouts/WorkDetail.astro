@@ -1,0 +1,35 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  company: string;
+  period: string;
+  role: string;
+  category: string;
+  stack: string[];
+}
+
+const { title, company, period, role, category, stack } = Astro.props;
+---
+<BaseLayout title={title}>
+
+  <section class="px-10 pt-16 pb-8 max-w-3xl">
+    <a href="/work" class="font-mono text-[10px] tracking-widest uppercase text-white/30 hover:text-[#c9873a] transition-colors mb-8 inline-block">← All projects</a>
+    <p class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] mb-3">{company} · {period}</p>
+    <h1 class="font-display text-6xl font-normal text-[#e8e0d0] mb-2">{title}</h1>
+    <p class="font-display text-2xl italic text-[#c9873a] font-normal mb-8">{category} · {role}</p>
+    <div class="flex flex-wrap gap-2 mb-10">
+      {stack.map((tag) => (
+  <span class="font-mono text-[10px] text-white/50 border border-white/10 px-4 py-2 tracking-wide hover:text-[#c9873a] hover:border-[#c9873a]/50 transition-colors cursor-default hover:-translate-y-1 transition-all duration-200">{tag}</span>
+      ))}
+    </div>
+  </section>
+
+  <hr class="border-white/8 mx-10 mb-12" />
+
+  <section class="px-10 pb-20 max-w-3xl">
+    <slot />
+  </section>
+
+</BaseLayout>
