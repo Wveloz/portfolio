@@ -13,20 +13,32 @@ const { title } = Astro.props;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title} · Wilbert Veloz</title>
+<style>
+  html, body { background-color: #0f0e0c !important; }
+  main-content {
+    animation: pageFadeIn 0.6s ease forwards;
+  }
+  @keyframes pageFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <meta http-equiv="View-Transition" content="same-origin">
 </head>
 <body class="bg-[#0f0e0c] text-[#e8e0d0] font-sans">
 
-  <Nav />
+  <div id="page-transition"></div>
 
+  <Nav />
+<div style="animation: pageFadeIn 0.6s ease forwards;">
   <slot />
+</div>
 
   <footer class="px-10 py-8 border-t border-white/6 flex justify-between items-center">
     <span class="font-mono text-[11px] text-white/20">Wilbert Veloz · Santo Domingo, DR</span>
-    <span class="font-mono text-[11px] text-white/20">© 2023 Wilbert Veloz. All rights reserved. </span>
+    <span class="font-mono text-[11px] text-white/20">© 2025 Wilbert Veloz. All rights reserved.</span>
   </footer>
 
 </body>
