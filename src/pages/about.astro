@@ -1,100 +1,150 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '@pt/layouts/BaseLayout.astro'
 ---
-<BaseLayout title="About">
 
+<BaseLayout title="About">
   <!-- HERO -->
-<section class="px-6 md:px-10 pt-10 md:pt-16 pb-8 md:pb-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-end">
+  <section class="grid grid-cols-1 items-end gap-8 px-6 pt-10 pb-8 md:grid-cols-2 md:gap-16 md:px-10 md:pt-16 md:pb-10">
     <div>
-      <a href="/" class="font-mono text-[10px] tracking-widest uppercase text-white/30 hover:text-[#c9873a] transition-colors mb-8 inline-block">← Back</a>
-      <p class="font-mono text-[11px] tracking-[0.15em] uppercase text-[#c9873a] mb-4">The person behind the code</p>
-    <h1 class="font-display text-4xl md:text-6xl font-normal text-[#e8e0d0] mb-1">More than</h1>
-<h2 class="font-display text-4xl md:text-6xl font-normal italic text-[#c9873a]">a tech lead.</h2>
+      <a
+        href="/"
+        class="mb-8 inline-block font-mono text-[10px] tracking-widest text-white/30 uppercase transition-colors hover:text-[#c9873a]"
+        >← Back</a
+      >
+      <p class="mb-4 font-mono text-[11px] tracking-[0.15em] text-[#c9873a] uppercase">The person behind the code</p>
+      <h1 class="font-display mb-1 text-4xl font-normal text-[#e8e0d0] md:text-6xl">More than</h1>
+      <h2 class="font-display text-4xl font-normal text-[#c9873a] italic md:text-6xl">a tech lead.</h2>
     </div>
     <div class="pt-16">
-      <p class="font-display text-xl italic text-white/60 leading-relaxed font-normal">"I build things — in code, and in life."</p>
+      <p class="font-display text-xl leading-relaxed font-normal text-white/60 italic">
+        "I build things — in code, and in life."
+      </p>
     </div>
   </section>
 
-  <hr class="border-white/8 mx-10" />
+  <hr class="mx-10 border-white/8" />
 
   <!-- STORY -->
-<section class="px-6 md:px-10 py-10 md:py-14">
-<p class="font-mono text-[10px] tracking-[0.18em] uppercase text-[#c9873a] mb-10 flex items-center gap-4 after:content-[''] after:h-px after:w-20 after:bg-white/10">My story</p>
+  <section class="px-6 py-10 md:px-10 md:py-14">
+    <p
+      class="mb-10 flex items-center gap-4 font-mono text-[10px] tracking-[0.18em] text-[#c9873a] uppercase after:h-px after:w-20 after:bg-white/10 after:content-['']"
+    >
+      My story
+    </p>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-  <div>
-    <p class="text-[15px] leading-[1.95] text-white/55 font-light mb-6">I'm a software engineer and tech lead based in Santo Domingo, Dominican Republic. For the past 3+ years I've been shaping the mobile experience at Banco Popular — one of the country's most widely used banking platforms.</p>
-    <p class="text-[15px] leading-[1.95] text-white/55 font-light mb-6">My work isn't just writing code. It's understanding what people need, figuring out what's actually possible within the constraints we have, and then building something that holds up — from the first line of documentation to the last deployment into production.</p>
-    <p class="text-[15px] leading-[1.95] text-white/55 font-light mb-6">I got here through a path that includes QA engineering, team leadership, and a deep curiosity about how software actually reaches people and changes the way they interact with their finances.</p>
-  </div>
-  <div>
-    <p class="font-display text-[22px] italic text-white/30 leading-relaxed border-l-[1.5px] border-[#c9873a] pl-6 mb-8 font-normal">I believe that the best software is built by people who understand both the problem and the human on the other side of the screen.</p>
-    <p class="text-[15px] leading-[1.95] text-white/55 font-light mb-6">Outside of work I'm driven by things that make life textured — music, exercise, photography, philosophy, and trying to explore life as hard as I'm able.</p>
-    <p class="text-[15px] leading-[1.95] text-white/55 font-light">I think being a well-rounded person makes you a better engineer. The curiosity that pulls me toward a good book is the same curiosity that makes me want to understand a problem from every angle before I build a solution.</p>
-  </div>
-</div>
-
-   
-  </section>
-
-  <hr class="border-white/8 mx-10" />
-
-  <!-- LIFE & TIMELINE -->
-  <section class="px-6 md:px-10 py-10 md:py-14">
-    <p class="font-mono text-[10px] tracking-[0.18em] uppercase text-[#c9873a] mb-10 flex items-center gap-4 after:content-[''] after:h-px after:w-20 after:bg-white/10">Life outside code</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
       <div>
-        <p class="font-mono text-[9px] tracking-[0.18em] uppercase text-white/25 mb-5">Interests</p>
-        <div class="space-y-3">
-          <div class="flex items-baseline gap-3 font-display text-base text-white/60 font-normal"><span class="font-mono text-[10px] text-[#c9873a]">—</span>Music & sound projects</div>
-          <div class="flex items-baseline gap-3 font-display text-base text-white/60 font-normal"><span class="font-mono text-[10px] text-[#c9873a]">—</span>Photography</div>
-          <div class="flex items-baseline gap-3 font-display text-base text-white/60 font-normal"><span class="font-mono text-[10px] text-[#c9873a]">—</span>Exercise & movement</div>
-          <div class="flex items-baseline gap-3 font-display text-base text-white/60 font-normal"><span class="font-mono text-[10px] text-[#c9873a]">—</span>Dance (Salsa Cubana)</div>
-          <div class="flex items-baseline gap-3 font-display text-base text-white/60 font-normal"><span class="font-mono text-[10px] text-[#c9873a]">—</span>Philosophy & research</div>
-          <div class="flex items-baseline gap-3 font-display text-base text-white/60 font-normal"><span class="font-mono text-[10px] text-[#c9873a]">—</span>Family farm</div>
-        </div>
+        <p class="mb-6 text-[15px] leading-[1.95] font-light text-white/55">
+          I'm a software engineer and tech lead based in Santo Domingo, Dominican Republic. For the past 3+ years I've
+          been shaping the mobile experience at Banco Popular — one of the country's most widely used banking platforms.
+        </p>
+        <p class="mb-6 text-[15px] leading-[1.95] font-light text-white/55">
+          My work isn't just writing code. It's understanding what people need, figuring out what's actually possible
+          within the constraints we have, and then building something that holds up — from the first line of
+          documentation to the last deployment into production.
+        </p>
+        <p class="mb-6 text-[15px] leading-[1.95] font-light text-white/55">
+          I got here through a path that includes QA engineering, team leadership, and a deep curiosity about how
+          software actually reaches people and changes the way they interact with their finances.
+        </p>
       </div>
-
       <div>
-        <p class="font-mono text-[9px] tracking-[0.18em] uppercase text-white/25 mb-5">Career timeline</p>
-        <div class="divide-y divide-white/[0.06]">
-          <div class="grid grid-cols-[80px_1fr] gap-6 py-5">
-            <span class="font-mono text-[10px] text-[#c9873a] tracking-wide pt-0.5">2023 – now</span>
-            <div>
-              <p class="text-sm text-white/70 font-normal mb-0.5">Tech Lead Agile</p>
-              <span class="font-mono text-[10px] text-white/30 tracking-wide">Banco Popular Dominicano</span>
-            </div>
-          </div>
-          <div class="grid grid-cols-[80px_1fr] gap-6 py-5">
-            <span class="font-mono text-[10px] text-[#c9873a] tracking-wide pt-0.5">2021 – 2023</span>
-            <div>
-              <p class="text-sm text-white/70 font-normal mb-0.5">Quality Engineer · QA Lead</p>
-              <span class="font-mono text-[10px] text-white/30 tracking-wide">Tashi · Connecticut, US</span>
-            </div>
-          </div>
-          <div class="grid grid-cols-[80px_1fr] gap-6 py-5">
-            <span class="font-mono text-[10px] text-[#c9873a] tracking-wide pt-0.5">2021</span>
-            <div>
-              <p class="text-sm text-white/70 font-normal mb-0.5">Intern</p>
-              <span class="font-mono text-[10px] text-white/30 tracking-wide">Tashi · Connecticut, US</span>
-            </div>
-          </div>
-        </div>
+        <p
+          class="font-display mb-8 border-l-[1.5px] border-[#c9873a] pl-6 text-[22px] leading-relaxed font-normal text-white/30 italic"
+        >
+          I believe that the best software is built by people who understand both the problem and the human on the other
+          side of the screen.
+        </p>
+        <p class="mb-6 text-[15px] leading-[1.95] font-light text-white/55">
+          Outside of work I'm driven by things that make life textured — music, exercise, photography, philosophy, and
+          trying to explore life as hard as I'm able.
+        </p>
+        <p class="text-[15px] leading-[1.95] font-light text-white/55">
+          I think being a well-rounded person makes you a better engineer. The curiosity that pulls me toward a good
+          book is the same curiosity that makes me want to understand a problem from every angle before I build a
+          solution.
+        </p>
       </div>
-
     </div>
   </section>
 
-  <hr class="border-white/8 mx-10" />
+  <hr class="mx-10 border-white/8" />
+
+  <!-- LIFE & TIMELINE -->
+  <section class="px-6 py-10 md:px-10 md:py-14">
+    <p
+      class="mb-10 flex items-center gap-4 font-mono text-[10px] tracking-[0.18em] text-[#c9873a] uppercase after:h-px after:w-20 after:bg-white/10 after:content-['']"
+    >
+      Life outside code
+    </p>
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+      <div>
+        <p class="mb-5 font-mono text-[9px] tracking-[0.18em] text-white/25 uppercase">Interests</p>
+        <div class="space-y-3">
+          <div class="font-display flex items-baseline gap-3 text-base font-normal text-white/60">
+            <span class="font-mono text-[10px] text-[#c9873a]">—</span>Music & sound projects
+          </div>
+          <div class="font-display flex items-baseline gap-3 text-base font-normal text-white/60">
+            <span class="font-mono text-[10px] text-[#c9873a]">—</span>Photography
+          </div>
+          <div class="font-display flex items-baseline gap-3 text-base font-normal text-white/60">
+            <span class="font-mono text-[10px] text-[#c9873a]">—</span>Exercise & movement
+          </div>
+          <div class="font-display flex items-baseline gap-3 text-base font-normal text-white/60">
+            <span class="font-mono text-[10px] text-[#c9873a]">—</span>Dance (Salsa Cubana)
+          </div>
+          <div class="font-display flex items-baseline gap-3 text-base font-normal text-white/60">
+            <span class="font-mono text-[10px] text-[#c9873a]">—</span>Philosophy & research
+          </div>
+          <div class="font-display flex items-baseline gap-3 text-base font-normal text-white/60">
+            <span class="font-mono text-[10px] text-[#c9873a]">—</span>Family farm
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="mb-5 font-mono text-[9px] tracking-[0.18em] text-white/25 uppercase">Career timeline</p>
+        <div class="divide-y divide-white/[0.06]">
+          <div class="grid grid-cols-[80px_1fr] gap-6 py-5">
+            <span class="pt-0.5 font-mono text-[10px] tracking-wide text-[#c9873a]">2023 – now</span>
+            <div>
+              <p class="mb-0.5 text-sm font-normal text-white/70">Tech Lead Agile</p>
+              <span class="font-mono text-[10px] tracking-wide text-white/30">Banco Popular Dominicano</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-[80px_1fr] gap-6 py-5">
+            <span class="pt-0.5 font-mono text-[10px] tracking-wide text-[#c9873a]">2021 – 2023</span>
+            <div>
+              <p class="mb-0.5 text-sm font-normal text-white/70">Quality Engineer · QA Lead</p>
+              <span class="font-mono text-[10px] tracking-wide text-white/30">Tashi · Connecticut, US</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-[80px_1fr] gap-6 py-5">
+            <span class="pt-0.5 font-mono text-[10px] tracking-wide text-[#c9873a]">2021</span>
+            <div>
+              <p class="mb-0.5 text-sm font-normal text-white/70">Intern</p>
+              <span class="font-mono text-[10px] tracking-wide text-white/30">Tashi · Connecticut, US</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="mx-10 border-white/8" />
 
   <!-- CTA -->
-<section class="mx-6 md:mx-10 my-10 md:my-14 border border-white/10 p-8 md:p-12 flex flex-col gap-6 bg-white/[0.02]">
-  <p class="font-mono text-[10px] tracking-[0.18em] uppercase text-white/25">Open to opportunities</p>
-  <p class="font-display text-3xl md:text-4xl font-normal text-[#e8e0d0] leading-snug">Want to work together?<br><span class="italic text-[#c9873a]">Let's talk.</span></p>
-  <div class="w-8 h-px bg-[#c9873a]"></div>
-  <a href="https://www.linkedin.com/in/wilbert-veloz-22409821a/" target="_blank" class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] hover:opacity-70 transition-opacity inline-flex items-center gap-2">Connect on LinkedIn <span>→</span></a>
-</section>
-
+  <section class="mx-6 my-10 flex flex-col gap-6 border border-white/10 bg-white/[0.02] p-8 md:mx-10 md:my-14 md:p-12">
+    <p class="font-mono text-[10px] tracking-[0.18em] text-white/25 uppercase">Open to opportunities</p>
+    <p class="font-display text-3xl leading-snug font-normal text-[#e8e0d0] md:text-4xl">
+      Want to work together?<br /><span class="text-[#c9873a] italic">Let's talk.</span>
+    </p>
+    <div class="h-px w-8 bg-[#c9873a]"></div>
+    <a
+      href="https://www.linkedin.com/in/wilbert-veloz-22409821a/"
+      target="_blank"
+      class="inline-flex items-center gap-2 font-mono text-[10px] tracking-widest text-[#c9873a] uppercase transition-opacity hover:opacity-70"
+      >Connect on LinkedIn <span>→</span></a
+    >
+  </section>
 </BaseLayout>
