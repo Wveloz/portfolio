@@ -1,16 +1,25 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '@pt/layouts/BaseLayout.astro'
 ---
-<BaseLayout title="404">
 
-  <section class="px-10 pt-32 pb-20 max-w-2xl">
-    <h1 class="font-display text-7xl font-normal text-[#e8e0d0] mb-2">Lost in</h1>
-    <h2 class="font-display text-7xl font-normal italic text-[#c9873a] mb-10">the void.</h2>
-    <p class="text-[15px] leading-relaxed text-white/50 font-light max-w-md mb-12">The page you're looking for doesn't exist — it may have been moved, deleted, or you may have mistyped the URL.</p>
-    <div class="flex gap-4"> 
-      <a href="/" class="bg-[#c9873a] text-[#0f0e0c] px-7 py-3 text-sm font-medium tracking-wide rounded-sm hover:-translate-y-1 transition-all duration-200">Go home</a>
-      <a href="/work" class="border border-white/20 text-white/50 px-7 py-3 text-sm font-light tracking-wide rounded-sm hover:border-white/40 transition-colors">View work</a>
+<BaseLayout title="404">
+  <section class="max-w-2xl px-10 pt-32 pb-20">
+    <h1 class="font-display mb-2 text-7xl font-normal text-[#e8e0d0]">Lost in</h1>
+    <h2 class="font-display mb-10 text-7xl font-normal text-[#c9873a] italic">the void.</h2>
+    <p class="mb-12 max-w-md text-[15px] leading-relaxed font-light text-white/50">
+      The page you're looking for doesn't exist — it may have been moved, deleted, or you may have mistyped the URL.
+    </p>
+    <div class="flex gap-4">
+      <a
+        href="/"
+        class="rounded-sm bg-[#c9873a] px-7 py-3 text-sm font-medium tracking-wide text-[#0f0e0c] transition-all duration-200 hover:-translate-y-1"
+        >Go home</a
+      >
+      <a
+        href="/work"
+        class="rounded-sm border border-white/20 px-7 py-3 text-sm font-light tracking-wide text-white/50 transition-colors hover:border-white/40"
+        >View work</a
+      >
     </div>
   </section>
-
 </BaseLayout>
