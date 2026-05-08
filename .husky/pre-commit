@@ -1,0 +1,26 @@
+#!/bin/bash
+set -eou pipefail
+
+echo ''
+echo '---------- ---------- ---------- ---------- -----------'
+echo '| Running Linter. Gotta look out for obvious problems |'
+echo '---------- ---------- ---------- ---------- -----------'
+npm run lint
+
+echo ''
+echo '---------- ---------- ---------- ---------- ---------- ----------'
+echo '| Running formatter. Gotta make sure formatting is standardized |'
+echo '---------- ---------- ---------- ---------- ---------- ----------'
+npm run format
+
+echo ''
+echo '---------- ---------- ---------- ---------- ---------- -----'
+echo '| Running typescript compiler. Preventing dumb type errors |'
+echo '---------- ---------- ---------- ---------- ---------- -----'
+npm run compile
+
+echo ''
+echo '---------- ---------- ---------- ---------- ---------- ---------- -------'
+echo '| Running astro build. Gotta make sure you can generate the static site |'
+echo '---------- ---------- ---------- ---------- ---------- ---------- -------'
+npm run build

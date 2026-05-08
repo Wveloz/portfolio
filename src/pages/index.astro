@@ -1,17 +1,18 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Work from '../components/Work.astro';
-import Skills from '../components/Skills.astro';
-import About from '../components/About.astro';
+import About from '@pt/components/About.astro'
+import Hero from '@pt/components/Hero.astro'
+import Skills from '@pt/components/Skills.astro'
+import Work from '@pt/components/Work.astro'
+import BaseLayout from '@pt/layouts/BaseLayout.astro'
 ---
+
 <BaseLayout title="Home">
   <Hero />
-  <hr class="border-white/8 mx-10" />
+  <hr class="mx-10 border-white/8" />
   <Work />
-  <hr class="border-white/8 mx-10" />
+  <hr class="mx-10 border-white/8" />
   <Skills />
-  <hr class="border-white/8 mx-10" />
+  <hr class="mx-10 border-white/8" />
   <About />
-  <hr class="border-white/8 mx-10" />
+  <hr class="mx-10 border-white/8" />
 </BaseLayout>

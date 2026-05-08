@@ -1,36 +1,80 @@
 ---
-import WorkDetail from '../../layouts/WorkDetail.astro';
+import WorkDetail from '@pt/layouts/WorkDetail.astro'
 ---
+
 <WorkDetail
   title="App Popular"
   company="Banco Popular Dominicano"
   period="2023 – Present"
   role="Tech Lead"
   category="Finance · iOS & Android"
-  stack={["SwiftUI", "Kotlin", "iOS", "Android", "Agile", "CI/CD"]}
+  stack={['SwiftUI', 'Kotlin', 'iOS', 'Android', 'Agile', 'CI/CD']}
 >
-
   <div class="mb-10">
-    <p class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] mb-4">Overview</p>
-    <p class="text-[15px] leading-[1.9] text-white/60 font-light mb-4">App Popular is Banco Popular Dominicano's flagship mobile app — one of the most widely used banking platforms in the Dominican Republic. The app gives clients full control of their finances from their phone, eliminating the need to visit a branch for everyday banking needs.</p>
-    <p class="text-[15px] leading-[1.9] text-white/60 font-light">Clients can check balances, move money, make every type of transaction and reclamation, and manage their account configurations — all through a secure, stable mobile experience on both iOS and Android.</p>
+    <p class="mb-4 font-mono text-[10px] tracking-widest text-[#c9873a] uppercase">Overview</p>
+    <p class="mb-4 text-[15px] leading-[1.9] font-light text-white/60">
+      App Popular is Banco Popular Dominicano's flagship mobile app — one of the most widely used banking platforms in
+      the Dominican Republic. The app gives clients full control of their finances from their phone, eliminating the
+      need to visit a branch for everyday banking needs.
+    </p>
+    <p class="text-[15px] leading-[1.9] font-light text-white/60">
+      Clients can check balances, move money, make every type of transaction and reclamation, and manage their account
+      configurations — all through a secure, stable mobile experience on both iOS and Android.
+    </p>
   </div>
 
   <div class="mb-10">
-    <p class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] mb-4">My Role</p>
-    <p class="text-[15px] leading-[1.9] text-white/60 font-light mb-4">As Tech Lead of an Agile team, I'm involved in the full software lifecycle of every feature we ship.</p>
-    <div class="space-y-3 mt-4">
-      <div class="flex gap-4"><span class="w-1 h-1 rounded-full bg-[#c9873a] flex-shrink-0 mt-2"></span><p class="text-sm text-white/50 font-light leading-relaxed">Define and scope features based on product and business needs, producing technical documentation that minimizes risk before development begins.</p></div>
-      <div class="flex gap-4"><span class="w-1 h-1 rounded-full bg-[#c9873a] flex-shrink-0 mt-2"></span><p class="text-sm text-white/50 font-light leading-relaxed">Design the data architecture required for each feature, aligned with client needs and backend capabilities.</p></div>
-      <div class="flex gap-4"><span class="w-1 h-1 rounded-full bg-[#c9873a] flex-shrink-0 mt-2"></span><p class="text-sm text-white/50 font-light leading-relaxed">Participate in UX/UI decisions based on current backend structure, ensuring what gets designed can actually be built.</p></div>
-      <div class="flex gap-4"><span class="w-1 h-1 rounded-full bg-[#c9873a] flex-shrink-0 mt-2"></span><p class="text-sm text-white/50 font-light leading-relaxed">Track features from conception through backend service readiness, with all security controls in place.</p></div>
-      <div class="flex gap-4"><span class="w-1 h-1 rounded-full bg-[#c9873a] flex-shrink-0 mt-2"></span><p class="text-sm text-white/50 font-light leading-relaxed">Own deployment across Development, QA, and Production environments.</p></div>
+    <p class="mb-4 font-mono text-[10px] tracking-widest text-[#c9873a] uppercase">My Role</p>
+    <p class="mb-4 text-[15px] leading-[1.9] font-light text-white/60">
+      As Tech Lead of an Agile team, I'm involved in the full software lifecycle of every feature we ship.
+    </p>
+    <div class="mt-4 space-y-3">
+      <div class="flex gap-4">
+        <span class="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-[#c9873a]"></span><p
+          class="text-sm leading-relaxed font-light text-white/50"
+        >
+          Define and scope features based on product and business needs, producing technical documentation that
+          minimizes risk before development begins.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <span class="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-[#c9873a]"></span><p
+          class="text-sm leading-relaxed font-light text-white/50"
+        >
+          Design the data architecture required for each feature, aligned with client needs and backend capabilities.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <span class="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-[#c9873a]"></span><p
+          class="text-sm leading-relaxed font-light text-white/50"
+        >
+          Participate in UX/UI decisions based on current backend structure, ensuring what gets designed can actually be
+          built.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <span class="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-[#c9873a]"></span><p
+          class="text-sm leading-relaxed font-light text-white/50"
+        >
+          Track features from conception through backend service readiness, with all security controls in place.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <span class="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-[#c9873a]"></span><p
+          class="text-sm leading-relaxed font-light text-white/50"
+        >
+          Own deployment across Development, QA, and Production environments.
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="mb-10">
-    <p class="font-mono text-[10px] tracking-widest uppercase text-[#c9873a] mb-4">Featured — Toke</p>
-    <p class="text-[15px] leading-[1.9] text-white/60 font-light">Toke is a payment infrastructure feature launched within App Popular to transform financial inclusion across the Dominican Republic. I contributed to the architecture design, security controls, and the full deployment pipeline that brought it to production.</p>
+    <p class="mb-4 font-mono text-[10px] tracking-widest text-[#c9873a] uppercase">Featured — Toke</p>
+    <p class="text-[15px] leading-[1.9] font-light text-white/60">
+      Toke is a payment infrastructure feature launched within App Popular to transform financial inclusion across the
+      Dominican Republic. I contributed to the architecture design, security controls, and the full deployment pipeline
+      that brought it to production.
+    </p>
   </div>
-
 </WorkDetail>

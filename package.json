@@ -6,14 +6,33 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
+    "prepare": "husky",
+    "start": "astro dev",
+    "compile": "tsc --noEmit",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx,.astro ./src",
+    "lint:fix": "eslint --fix --ext .js,.ts,.jsx,.tsx,.astro ./src",
+    "format": "prettier --check ./src",
+    "format:fix": "prettier --write ./src"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.1.2",
     "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.4.1",
+    "husky": "^9.1.7",
+    "eslint-plugin-no-relative-import-paths": "^1.6.1",
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.13"
   }
 }
