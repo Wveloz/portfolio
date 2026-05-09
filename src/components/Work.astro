@@ -1,62 +1,101 @@
-<section id="work" class="px-10 py-16">
-  <p
-    class="mb-10 flex items-center gap-4 font-mono text-[10px] tracking-[0.18em] text-[#c9873a] uppercase after:h-px after:w-20 after:bg-white/10 after:content-['']"
-  >
-    Selected work
-  </p>
+---
+import { cva } from 'class-variance-authority'
 
-  <div
-    class="mb-4 rounded-sm border border-white/10 bg-white/3 p-8 transition-all duration-200 hover:-translate-y-1 hover:bg-white/[0.06]"
-  >
-    <div class="mb-4 flex items-start justify-between">
-      <div>
-        <h3 class="font-display mb-1 text-2xl text-[#e8e0d0]">Banco Popular Mobile</h3>
-        <p class="text-xs tracking-wide text-white/40 uppercase">Banco Popular Dominicano · iOS & Android</p>
-      </div>
-      <span class="border border-[#c9873a]/40 px-3 py-1 font-mono text-[10px] tracking-widest text-[#c9873a]"
-        >Tech Lead</span
-      >
-    </div>
-    <p class="mb-5 text-sm leading-relaxed font-light text-white/50">
-      Full-featured banking app giving clients access to their finances, transfers, transactions, reclamations and
-      account management — entirely from their phone. Contributed to UX/UI decisions, data architecture, backend service
-      design, and led deployment across dev, QA, and production environments.
-    </p>
-    <div class="flex flex-wrap gap-2">
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40">SwiftUI</span>
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40">Kotlin</span>
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40">iOS</span>
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40">Android</span>
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40">Agile</span>
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40">CI/CD</span>
-    </div>
-  </div>
+const content = [
+  {
+    project: 'Banco Popular Mobile',
+    institution: 'Banco Popular Dominicano · iOS & Android',
+    role: 'Tech Lead',
+    description:
+      'Full-featured banking app giving clients access to their finances, transfers, transactions, reclamations and account management — entirely from their phone. Contributed to UX/UI decisions, data architecture, backend service design, and led deployment across dev, QA, and production environments.',
+    keywords: ['SwiftUI', 'Kotlin', 'iOS', 'Android', 'Agile', 'CI/CD'],
+  },
+  {
+    project: 'Toke',
+    institution: 'Banco Popular · Payment Infrastructure',
+    role: 'Latest',
+    description:
+      'Payment infrastructure initiative launched by Banco Popular to transform financial inclusion across the Dominican Republic. Participated in development of the feature in the App.',
+    keywords: ['Payments', 'Financial Inclusion', 'Backend Services', 'Security'],
+  },
+]
 
-  <div
-    class="rounded-sm border border-white/10 bg-white/3 p-8 transition-all duration-200 hover:-translate-y-1 hover:bg-white/6"
-  >
-    <div class="mb-4 flex items-start justify-between">
-      <div>
-        <h3 class="font-display mb-1 text-2xl text-[#e8e0d0]">Toke</h3>
-        <p class="text-xs tracking-wide text-white/40 uppercase">Banco Popular · Payment Infrastructure</p>
+const style = {
+  container: cva(['px-10', 'py-16']),
+  title: cva([
+    "after:content-['']",
+    'after:bg-white/10',
+    'after:h-px',
+    'after:w-20',
+    'flex',
+    'font-mono',
+    'gap-4',
+    'items-center',
+    'mb-10',
+    'text-primary-500',
+    'text-xs',
+    'tracking-[0.18em]',
+  ]),
+  card: cva([
+    'bg-white/3',
+    'border',
+    'border-white/10',
+    'duration-200',
+    'hover:-translate-y-1',
+    'hover:bg-white/6',
+    'mb-4',
+    'p-8',
+    'rounded-sm',
+    'transition-all',
+  ]),
+  header: cva(['mb-4', 'flex items-start', 'justify-between']),
+  project: cva(['font-display mb-1 text-2xl text-secondary-500']),
+  institution: cva(['text-xs', 'tracking-wide', 'text-content-500/40', 'uppercase']),
+  role: cva([
+    'border',
+    'border-primary-500/40',
+    'font-mono',
+    'px-3',
+    'py-1',
+    'text-primary-500',
+    'text-xs',
+    'tracking-widest',
+  ]),
+  description: cva(['mb-5', 'text-sm', 'leading-relaxed', 'font-light', 'text-content-500/50']),
+  list: cva(['flex', 'flex-wrap', 'gap-2']),
+  keyword: cva([
+    'bg-white/5',
+    'border',
+    'border-white/10',
+    'font-mono',
+    'px-3',
+    'py-1',
+    'text-[10px]',
+    'text-secondary-500/40',
+  ]),
+}
+---
+
+<section id="work" class={style.container()}>
+  <p class={style.title()}>Selected work</p>
+
+  {
+    content.map((c) => (
+      <div class={style.card()}>
+        <div class={style.header()}>
+          <div>
+            <h3 class={style.project()}>{c.institution}</h3>
+            <p class={style.institution()}>{c.project}</p>
+          </div>
+          <span class={style.role()}>{c.role}</span>
+        </div>
+        <p class={style.description()}>{c.description}</p>
+        <div class={style.list()}>
+          {c.keywords.map((k) => (
+            <span class={style.keyword()}>{k}</span>
+          ))}
+        </div>
       </div>
-      <span class="border border-[#c9873a]/40 px-3 py-1 font-mono text-[10px] tracking-widest text-[#c9873a]"
-        >Latest</span
-      >
-    </div>
-    <p class="mb-5 text-sm leading-relaxed font-light text-white/50">
-      Payment infrastructure initiative launched by Banco Popular to transform financial inclusion across the Dominican
-      Republic. Participated in development of the feature in the App.
-    </p>
-    <div class="flex flex-wrap gap-2">
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40">Payments</span>
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40"
-        >Financial Inclusion</span
-      >
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40"
-        >Backend Services</span
-      >
-      <span class="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] text-[#e8e0d0]/40">Security</span>
-    </div>
-  </div>
+    ))
+  }
 </section>
