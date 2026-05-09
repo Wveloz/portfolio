@@ -1,41 +1,68 @@
-<section id="skills" class="px-6 py-10 md:px-10 md:py-16">
-  <p
-    class="mb-10 flex items-center gap-4 font-mono text-[10px] tracking-[0.18em] text-[#c9873a] uppercase after:h-px after:w-20 after:bg-white/10 after:content-['']"
-  >
-    Skills
-  </p>
-  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-    <div
-      class="rounded-sm border border-white/8 p-6 transition-all duration-20 hover:-translate-y-1 hover:bg-white/[0.06]"
-    >
-      <p class="mb-4 font-mono text-[9px] tracking-[0.18em] text-[#c9873a] uppercase">Mobile</p>
-      <div class="space-y-2">
-        <p class="text-sm font-light text-white/60">SwiftUI / Swift</p>
-        <p class="text-sm font-light text-white/60">Kotlin / Android</p>
-        <p class="text-sm font-light text-white/60">iOS & Android platforms</p>
-        <p class="text-sm font-light text-white/60">Cross-platform patterns</p>
-      </div>
-    </div>
-    <div
-      class="rounded-sm border border-white/8 p-6 transition-all duration-20 hover:-translate-y-1 hover:bg-white/[0.06]"
-    >
-      <p class="mb-4 font-mono text-[9px] tracking-[0.18em] text-[#c9873a] uppercase">Engineering</p>
-      <div class="space-y-2">
-        <p class="text-sm font-light text-white/60">Data architecture</p>
-        <p class="text-sm font-light text-white/60">Backend integration</p>
-        <p class="text-sm font-light text-white/60">Security controls</p>
-      </div>
-    </div>
-    <div
-      class="rounded-sm border border-white/8 p-6 transition-all duration-20 hover:-translate-y-1 hover:bg-white/[0.06]"
-    >
-      <p class="mb-4 font-mono text-[9px] tracking-[0.18em] text-[#c9873a] uppercase">Leadership</p>
-      <div class="space-y-2">
-        <p class="text-sm font-light text-white/60">Agile / Scrum</p>
-        <p class="text-sm font-light text-white/60">Technical documentation</p>
-        <p class="text-sm font-light text-white/60">UX/UI decision making</p>
-        <p class="text-sm font-light text-white/60">Risk management</p>
-      </div>
-    </div>
+---
+import { cva } from 'class-variance-authority'
+
+const content = [
+  {
+    subtitle: 'MOBILE',
+    list: ['SwiftUI / Swift', 'Kotlin / Android', 'iOS & Android platforms', 'Cross-platform patterns'],
+  },
+  {
+    subtitle: 'ENGINEERING',
+    list: ['Data architecture', 'Backend integration', 'Security controls'],
+  },
+  {
+    subtitle: 'LEADERSHIP',
+    list: ['Agile / Scrum', 'Technical documentation', 'UX/UI decision making', 'Risk management'],
+  },
+]
+
+const style = {
+  container: cva(['px-6', 'py-10', 'md:px-10', 'md:py-16']),
+  title: cva([
+    "after:content-['']",
+    'after:bg-white/10',
+    'after:h-px',
+    'after:w-20',
+    'flex',
+    'font-mono',
+    'gap-4',
+    'items-center',
+    'mb-10',
+    'text-[10px]',
+    'text-primary-500',
+    'tracking-[0.18em]',
+    'uppercase',
+  ]),
+  list: cva(['grid', 'grid-cols-1', 'gap-6', 'md:grid-cols-3']),
+  item: cva([
+    'border',
+    'border-white/8',
+    'duration-20',
+    'hover:-translate-y-1',
+    'hover:bg-white/6',
+    'p-6',
+    'rounded-sm',
+    'transition-all',
+  ]),
+  subtitle: cva(['mb-4', 'font-mono', 'text-[9px]', 'tracking-[0.18em]', 'text-primary-500']),
+  keyword: cva(['text-sm', 'font-light', 'text-white/60']),
+}
+---
+
+<section id="skills" class={style.container()}>
+  <p class={style.title()}>Skills</p>
+  <div class={style.list()}>
+    {
+      content.map((c) => (
+        <div class={style.item()}>
+          <p class={style.subtitle()}>{c.subtitle}</p>
+          <div class="space-y-2">
+            {c.list.map((k) => (
+              <p class={style.keyword()}>{k}</p>
+            ))}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </section>

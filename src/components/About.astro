@@ -1,42 +1,56 @@
-<section id="about" class="px-10 py-16">
-  <p
-    class="mb-10 flex items-center gap-4 font-mono text-[10px] tracking-[0.18em] text-[#c9873a] uppercase after:h-px after:w-20 after:bg-white/10 after:content-['']"
-  >
-    About
-  </p>
-  <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-16">
+---
+import { cva } from 'class-variance-authority'
+
+const content = {
+  experience: [
+    "I'm a software engineer and tech lead based in the Dominican Republic, currently shaping mobile experiences at Banco Popular — one of the country's most widely used banking platforms.",
+    'My work spans the full lifecycle of a feature: from conception and data architecture, through development and product decision. I care about building things that last.',
+    "Outside of code, I'm driven by the things that make life textured — music, photography, excersise, philosophy, and tending a farm where we grow things the earth gives back.",
+  ],
+  keyword: ['Music & sound projects', 'Photography', 'Excersise', 'Philosophy & research', 'Dance'],
+}
+
+const style = {
+  container: cva(['px-10', 'py-16']),
+  title: cva([
+    "after:content-['']",
+    'items-center',
+    'after:bg-white/10',
+    'after:h-px',
+    'after:w-20',
+    'flex',
+    'font-mono',
+    'gap-4',
+    'mb-10',
+    'text-primary-500',
+    'text-xs',
+    'tracking-[0.18em]',
+    'uppercase',
+  ]),
+  content: cva(['grid', 'grid-cols-1', 'gap-8', 'md:grid-cols-2', 'md:gap-16']),
+  paragraph: cva(['mb-5', 'text-[15px]', 'leading-[1.9]', 'font-light', 'text-white/60']),
+  keywordList: cva(['space-y-3']),
+  keywordItem: cva(['flex', 'items-center', 'gap-3', 'text-sm', 'font-light', 'text-secondary-900/40']),
+  keyword: cva(['h-1', 'w-1', 'shrink-0', 'rounded-full', 'bg-primary-500']),
+}
+---
+
+<section id="about" class={style.container()}>
+  <p class={style.title()}>About</p>
+  <div class={style.content()}>
     <div>
-      <p class="mb-5 text-[15px] leading-[1.9] font-light text-white/60">
-        I'm a software engineer and tech lead based in the Dominican Republic, currently shaping mobile experiences at
-        Banco Popular — one of the country's most widely used banking platforms.
-      </p>
-      <p class="mb-5 text-[15px] leading-[1.9] font-light text-white/60">
-        My work spans the full lifecycle of a feature: from conception and data architecture, through development and
-        product decision. I care about building things that last.
-      </p>
-      <p class="text-[15px] leading-[1.9] font-light text-white/60">
-        Outside of code, I'm driven by the things that make life textured — music, photography, excersise, philosophy,
-        and tending a farm where we grow things the earth gives back.
-      </p>
+      {content.experience.map((e) => <p class={style.paragraph()}>{e}</p>)}
     </div>
     <div>
-      <div class="mb-6 h-0.5 w-8 bg-[#c9873a]"></div>
-      <div class="space-y-3">
-        <div class="flex items-center gap-3 text-sm font-light text-white/40">
-          <span class="h-1 w-1 shrink-0 rounded-full bg-[#c9873a]"></span>Music & sound projects
-        </div>
-        <div class="flex items-center gap-3 text-sm font-light text-white/40">
-          <span class="h-1 w-1 shrink-0 rounded-full bg-[#c9873a]"></span>Photography
-        </div>
-        <div class="flex items-center gap-3 text-sm font-light text-white/40">
-          <span class="h-1 w-1 shrink-0 rounded-full bg-[#c9873a]"></span>excersise
-        </div>
-        <div class="flex items-center gap-3 text-sm font-light text-white/40">
-          <span class="h-1 w-1 shrink-0 rounded-full bg-[#c9873a]"></span>Philosophy & research
-        </div>
-        <div class="flex items-center gap-3 text-sm font-light text-white/40">
-          <span class="h-1 w-1 shrink-0 rounded-full bg-[#c9873a]"></span>Dance
-        </div>
+      <div class={style.keywordList()}>
+        {
+          content.keyword.map((k) => (
+            <div class={style.keywordItem()}>
+              <span class={style.keyword()} />
+              <span>{k}</span>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
